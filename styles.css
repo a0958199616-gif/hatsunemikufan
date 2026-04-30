@@ -1,130 +1,89 @@
-/* ========== Base Reset ========== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Orbitron','Noto Sans TC';
+  background:#020617;
+  color:white;
+  overflow-x:hidden;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-family: "Inter", "Noto Sans TC", sans-serif;
-  background: #39c5bb;
-  color: #e6e6e6;
+/* 粒子層 */
+#particles{
+  position:fixed;
+  inset:0;
+  z-index:-1;
 }
 
-/* ========== Layout ========== */
-.section {
-  padding: 80px 20px;
+/* HERO 背景 */
+.hero{
+  height:100vh;
+  background:url("miku.png") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
+/* 深色科技遮罩 */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at center, transparent 20%, #020617 80%),
+    linear-gradient(#02061788,#020617);
 }
 
-/* ========== Hero ========== */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
+/* HERO 內容 */
+.hero-content{
+  position:relative;
+  z-index:2;
 }
 
-.hero-title {
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: 1px;
+.hero h1{
+  font-size:80px;
+  color:#7fffd4;
+  text-shadow:0 0 25px #39c5bb,0 0 60px #39c5bb;
 }
 
-.hero-subtitle {
-  margin-top: 16px;
-  font-size: 18px;
-  color: #a0a0a0;
+.hero p{
+  margin-top:10px;
+  font-size:22px;
 }
 
-.hero-buttons {
-  margin-top: 32px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+/* 按鈕 */
+.buttons{margin-top:40px}
+.btn{
+  padding:14px 36px;
+  margin:0 10px;
+  border:2px solid #39c5bb;
+  border-radius:999px;
+  color:#7fffd4;
+  text-decoration:none;
+  box-shadow:0 0 15px #39c5bb;
+  transition:.3s;
+}
+.btn:hover{box-shadow:0 0 30px #39c5bb}
+
+/* HUD 面板 */
+.panel{
+  margin:120px auto;
+  width:70%;
+  padding:60px;
+  text-align:center;
+  border:1px solid #39c5bb55;
+  border-radius:20px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 40px #39c5bb33;
 }
 
-/* ========== Buttons ========== */
-.btn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s ease;
+.panel h2{
+  color:#ff77ff;
+  margin-bottom:20px;
+  text-shadow:0 0 20px #ff77ff;
 }
 
-.primary {
-  background: #4f7cff;
-  color: white;
-}
-
-.primary:hover {
-  background: #3b63d1;
-}
-
-.secondary {
-  border: 1px solid #4f7cff;
-  color: #4f7cff;
-}
-
-.secondary:hover {
-  background: #4f7cff;
-  color: white;
-}
-
-/* ========== Section Titles ========== */
-.section-title {
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* ========== About ========== */
-.about-text {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #cfcfcf;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ========== Contact ========== */
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-
-.contact-item {
-  color: #cfcfcf;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.2s;
-}
-
-.contact-item:hover {
-  color: #4f7cff;
-}
-
-/* ========== Responsive ========== */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .hero-subtitle {
-    font-size: 16px;
-  }
-
-  .section {
-    padding: 60px 16px;
-  }
+.contact a{
+  margin:0 20px;
+  color:#7fffd4;
 }
