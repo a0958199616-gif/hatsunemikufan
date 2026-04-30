@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Miku Portfolio</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Hero Section -->
-  <section id="hero" class="section hero">
-    <div class="container">
-      <h1 class="hero-title"> Miku</h1>
+<canvas id="particles"></canvas>
 
-      <p class="hero-subtitle">
-        Frontend Developer & Design-oriented Builder
-      </p>
+<section class="hero">
+  <div class="hero-overlay"></div>
 
-      <div class="hero-buttons">
-        <a href="#about" class="btn primary">View Work</a>
-        <a href="#contact" class="btn secondary">Contact Me</a>
-      </div>
+  <div class="hero-content">
+    <h1>Miku</h1>
+    <p>Frontend Developer & Designer</p>
+
+    <div class="buttons">
+      <a href="#about" class="btn">About Me</a>
+      <a href="#contact" class="btn">Contact</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2 class="section-title">About</h2>
+<section id="about" class="panel">
+  <h2>ABOUT</h2>
+  <p>Creating cute & futuristic web experiences inspired by virtual idols ✨</p>
+</section>
 
-      <p class="about-text">
-好きな人 好きなこと 好きな場所 めがけた 優しさが 変えるんだ 明日を
-      </p>
-    </div>
-  </section>
+<section id="contact" class="panel">
+  <h2>CONTACT</h2>
+  <div class="contact">
+    <a>Email</a>
+    <a>GitHub</a>
+    <a>LinkedIn</a>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-
-      <div class="contact-list">
-        <a href="mailto:your.email@example.com" class="contact-item">
-          Email: your.email@example.com
-        </a>
-
-        <a href="https://github.com/yourname" target="_blank" class="contact-item">
-          GitHub
-        </a>
-
-        <a href="https://linkedin.com/in/yourname" target="_blank" class="contact-item">
-          LinkedIn
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
