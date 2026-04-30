@@ -13,7 +13,158 @@ body{
   z-index:-1;
 }
 
+/* HERO 背景/* --- 保留原本所有的 CSS 樣式 --- */
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Orbitron','Noto Sans TC';
+  background:#020617;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* 粒子層 */
+#particles{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+}
+
 /* HERO 背景 */
+.hero{
+  height:100vh;
+  background:url("miku.png") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+/* 深色科技遮罩 */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at center, transparent 20%, #020617 80%),
+    linear-gradient(#02061788,#020617);
+}
+
+/* HERO 內容 */
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero h1{
+  font-size:80px;
+  color:#7fffd4;
+  text-shadow:0 0 25px #39c5bb,0 0 60px #39c5bb;
+}
+
+.hero p{
+  margin-top:10px;
+  font-size:22px;
+}
+
+/* 按鈕 */
+.buttons{margin-top:40px}
+.btn{
+  padding:14px 36px;
+  margin:0 10px;
+  border:2px solid #39c5bb;
+  border-radius:999px;
+  color:#7fffd4;
+  text-decoration:none;
+  box-shadow:0 0 15px #39c5bb;
+  transition:.3s;
+}
+.btn:hover{box-shadow:0 0 30px #39c5bb}
+
+/* HUD 面板 */
+.panel{
+  margin:120px auto;
+  width:70%;
+  padding:60px;
+  text-align:center;
+  border:1px solid #39c5bb55;
+  border-radius:20px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 40px #39c5bb33;
+}
+
+.panel h2{
+  color:#ff77ff;
+  margin-bottom:20px;
+  text-shadow:0 0 20px #ff77ff;
+}
+
+.contact a{
+  margin:0 20px;
+  color:#7fffd4;
+}
+
+/* --- 以下是新增的藝廊專用 CSS --- */
+
+/* 稍微優化一下藝廊面板的 padding */
+.gallery-panel {
+  padding: 60px 40px;
+}
+
+/* 建立網格系統：2x2 排版 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 兩欄 */
+  gap: 30px; /* 圖片間距 */
+  margin-top: 40px;
+}
+
+/* 藝廊項目容器 */
+.gallery-item {
+  position: relative;
+  overflow: hidden; /* 確保滑鼠懸停縮放時不會超出邊框 */
+  border: 2px solid #39c5bb33; /* 淡淡的初音綠邊框 */
+  border-radius: 15px;
+  box-shadow: 0 0 15px #39c5bb22;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 圖片本身樣式 */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* 讓圖片在容器內自適應，不變形 */
+  aspect-ratio: 1 / 1;
+  object-fit: contain; /* 保留圖片完整內容，多餘空間顯示背景 */
+  background: #000; /* 圖片後方的黑色背景，配合 contain */
+  transition: transform 0.5s ease;
+}
+
+/* 滑鼠懸停時的容器效果（發光） */
+.gallery-item:hover {
+  transform: translateY(-5px); /* 輕微上浮 */
+  border-color: #39c5bb; /* 邊框變亮 */
+  box-shadow: 0 0 30px #39c5bb88; /* 強烈霓虹光暈 */
+}
+
+/* 滑鼠懸停時的圖片效果（放大） */
+.gallery-item:hover img {
+  transform: scale(1.05); /* 輕微放大圖片 */
+}
+
+/* 響應式設計：在手機上改為單欄排版 */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .panel {
+    width: 90%;
+    padding: 40px 20px;
+  }
+} */
 .hero{
   height:100vh;
   background:url("miku.png") center/cover no-repeat;
